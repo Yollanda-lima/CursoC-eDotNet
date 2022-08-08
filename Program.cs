@@ -28,7 +28,8 @@
 // : serve para fazer uma condicao
 // $ serve para fazer uma condicao
 // @ serve para fazer uma condicao
-// if serve para fazer uma condicao
+// if é uma condicao
+// for é um laço de repeticao
 
 // Console.Write("Digite o primeiro nome: ");
 // string name = Console.ReadLine();
@@ -48,4 +49,16 @@
 //     Console.WriteLine("Voce e menor de idade");
 // }
 
-string[] names = new string[3];
+class Program
+{
+    static void Main()
+    {
+        string[] names = { "Fredi", "Joao", "Maria" };
+        
+        foreach(string name in names)
+        {
+            Console.WriteLine(name);
+        }
+    }
+}
+

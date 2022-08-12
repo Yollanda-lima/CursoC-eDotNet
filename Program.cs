@@ -25,11 +25,14 @@
 // /= serve para dividir valor de uma variavel com outra e atribuir a variavel
 // %= serve para obter o resto de uma divisao e atribuir a variavel
 // ? serve para fazer uma condicao
+// ? faz uma condicao e executa uma ação
 // : serve para fazer uma condicao
 // $ serve para fazer uma condicao
 // @ serve para fazer uma condicao
 // if é uma condicao
 // for é um laço de repeticao
+//. faz uma referencia a uma variavel
+//is serve para comparar valor de uma variavel com outra
 
 // Console.Write("Digite o primeiro nome: ");
 // string name = Console.ReadLine();
@@ -53,12 +56,65 @@ class Program
 {
     static void Main()
     {
-        string[] names = { "Fredi", "Joao", "Maria" };
-        
-        foreach(string name in names)
+        // string[] names = { "Fredi", "Joao", "Maria" };
+
+        // if (string.Equals(names[0], "redi",StringComparison.OrdinalIgnoreCase))
+        // {
+        //     Console.WriteLine("Igual");
+        // }
+
+        // foreach(string name in names)
+        // {
+        //     Console.WriteLine(name);
+        // }
+
+
+        // int? i = 10;
+        // int? i2 = i;
+        // i2 = 20;
+
+        // i = null;
+
+        // if (i is null){
+        //     Console.WriteLine("Nulo");
+            
+        // }
+
+        // Test t1 = new Test();
+        // t1.x = 12;
+
+        // Test t2 = t1;
+        // t2 = new Test();
+        // t2.x = 20;
+
+        // Console.WriteLine(t1.x);
+
+
+        string s = null;
+
+        try
         {
-            Console.WriteLine(name);
+            Console.WriteLine(s.Length);
         }
+        catch (System.NullReferenceException)
+        {
+            Console.WriteLine("Erro de referencia nula");
+        }
+        finally
+        {
+            Console.WriteLine("Final");
+        }
+
+        
+
+
+
     }
+
+}
+
+class Test
+{
+    public int x;
 }
 
